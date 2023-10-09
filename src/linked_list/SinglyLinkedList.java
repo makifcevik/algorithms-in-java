@@ -28,8 +28,14 @@ class SinglyLinkedList<T>
     {
         if(location < 0 || location >= N)
         {
-            throw new IndexOutOfBoundsException(String.format("Invalid position %s", location));
+            throw new IndexOutOfBoundsException(String.format("Invalid position at %s", location));
         }
+
+        if(location == 0)
+        {
+            return head.value;
+        }
+
         Node traverse = head;
         for(int i = 0; i < location; i++)
         {
