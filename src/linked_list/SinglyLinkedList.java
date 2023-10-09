@@ -44,7 +44,7 @@ class SinglyLinkedList<T>
         return traverse.value;
     }
 
-    public int indexOf(int value)
+    public int indexOf(T value)
     {
         Node traverse = head;
         int loc = 0;
